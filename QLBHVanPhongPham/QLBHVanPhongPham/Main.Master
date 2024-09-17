@@ -1,0 +1,334 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="QLBHVanPhongPham.Main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+               <title>CLEVER BOX</title>
+    <style>
+        body{
+            background-color: #F7F6F3;
+            font-family: Verdana;
+            color: #7C6F57
+        }
+#content {
+    width: 750px;
+    min-height: 600px;
+    border: 1px solid #33CCCC;
+    float: right;
+    margin-left: 5px;
+    margin-right: 0px;
+    margin-bottom: 5px;
+    vertical-align:middle;
+    text-align: center;
+    background-color: white
+}
+#wrapper {
+    width: 1450px;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+#header {
+    color: #247BA0;
+    text-align: center;
+    font-size: 20px;
+    background-color: burlywood
+}
+
+#nav {
+    background-color: antiquewhite;
+    padding: 5px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li a {
+    color: #F1FAEE;
+    font-size: 30px;
+    column-width: 5%;
+}
+
+li {
+    display: inline;
+    padding-left: 2px;
+    column-width: 20px;
+}
+
+a {
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+li a:hover {
+    background-color: #F3FFBD;
+    color: #FF1654;
+    padding: 1%;
+}
+
+#side {
+    font-size: medium;
+    width: 220px;
+    height: auto;
+    border: 1px solid #CDCDCD;
+    float: left;
+    background-color: antiquewhite;
+    padding-left: 10px;
+    padding-top: 10px;
+    margin-bottom: 5px;
+}
+
+#article {
+    background-color: #EEF5DB;
+    padding: 10px;
+    padding-bottom: 75%;
+}
+
+#footer {
+    background-color: burlywood;
+    text-align: center;
+    padding-top:2%;
+    padding-bottom: 2%;
+    font-size: 20px;
+}
+
+#con {
+    border: double;
+    border-color: burlywood;
+}
+        .auto-style2 {
+            height: 764px;
+            text-align: left;
+            width: 1400px;
+        }
+                
+        /*.auto-style8 {
+            text-align: center;
+            height: 2000px;
+        }*/
+        .auto-style9 {
+            text-align: left;
+        }
+        
+        .auto-style10 {
+            float: left;
+            left: -4px;
+            position: relative;
+            top: 1px;
+            width: 1400px;
+            height: 287px
+        }
+        
+        .auto-style11 {
+            text-align: left;
+            color: #7C6F57;
+        }
+        
+        .auto-style13 {
+            font-size: medium;
+        }
+        .auto-style14 {
+            text-align: center;
+            width: 255px;
+        }
+        
+        .auto-style15 {
+            color: #FFFFFF;
+        }
+        
+        .auto-style16 {
+            font-size: medium;
+            color: #FFFFFF;
+        }
+        .auto-style17 {
+            color: #FFFFFF;
+            text-align: left;
+            background-color: #33CCCC;
+            height: 25px;
+            width: 998px;
+        }
+        .auto-style18 {
+            height: 29px;
+            text-align: left;
+        }
+        .auto-style19 {
+            width: 100%;
+            height: 47px;
+        }
+        .auto-style20 {
+            height: 29px;
+            width: 286px;
+        }
+        .auto-style21 {
+            height: 436px;
+        }
+        .auto-style22 {
+            margin-bottom: 0px;
+        }
+        
+        .auto-style24 {
+            height: 29px;
+            text-align: left;
+            width: 585px;
+        }
+        .auto-style26 {
+            height: 29px;
+            text-align: left;
+            width: 232px;
+        }
+        
+        .auto-style27 {
+            font-size: medium;
+            margin-left: 17px;
+            background-color: #FFFFFF;
+        }
+        
+        .auto-style28 {
+            font-size: small;
+        }
+        
+        .auto-style29 {
+            text-align: left;
+            color: #009999;
+        }
+        
+        </style>
+    <link href="css/my.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+   <form id="form1" runat="server">
+    <div id="wrapper">
+    <header id="header" class="auto-style2" style="background-color: #FFFFFF; height: 910px; width:1450px">
+        <div class="auto-style17" style="width: 1450px">
+            &nbsp;&nbsp; Hotline : 0896918585&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Contact : <a href="mailto:contact@cleverworld.vn">contact@cleverworld.vn</a>&nbsp; <div class="auto-style21">
+                <table class="auto-style19">
+                    <tr>
+                        <td class="auto-style20">
+                            <asp:ImageButton ID="ImgTrangChu" runat="server" ImageUrl="~/Images/Logo.jpg" PostBackUrl="~/TrangChu.aspx" />
+                        </td>
+                        <td class="auto-style26">&nbsp;&nbsp;
+                            <asp:TextBox ID="txtTimKiem" runat="server" Width="150px"></asp:TextBox>
+&nbsp;<asp:ImageButton ID="ImgTimKiem" runat="server" ImageUrl="~/Images/search.png" Width="23px" OnClick="ImgTimKiem_Click" />
+                            <br />
+                            <asp:Label ID="lblKQ" runat="server" CssClass="auto-style28" ForeColor="Red"></asp:Label>
+                        </td>
+                        <td class="auto-style24">
+                            <br />
+&nbsp;&nbsp;
+                            <asp:Menu ID="Menu3" runat="server" BackColor="White" CssClass="auto-style27" ForeColor="Black" Orientation="Horizontal" RenderingMode="Table" Width="20px" Font-Size="Medium">
+                                <DynamicHoverStyle ForeColor="White" BackColor="#33CCCC" />
+                                <DynamicMenuItemStyle BackColor="#FFFFCC" ForeColor="Black" HorizontalPadding="2px" VerticalPadding="8px" />
+                                <DynamicMenuStyle BackColor="#FFFFCC" />
+                                <DynamicSelectedStyle BackColor="#FFFFCC" ForeColor="Black" />
+                                <DynamicItemTemplate>
+                                    <%# Eval("Text") %>
+                                </DynamicItemTemplate>
+                                <Items>
+                                    <asp:MenuItem Text="Chính sách giao hàng" Value="Chính sách giao hàng" NavigateUrl="~/ChinhSachGiaoHang.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Chính sách đổi trả/ hoàn tiền" Value="Chính sách đổi trả/ hoàn tiền" NavigateUrl="~/ChinhSachDoiHoan.aspx"></asp:MenuItem>
+                                </Items>
+                                <StaticHoverStyle BackColor="#33CCCC" ForeColor="White" />
+                                <StaticSelectedStyle BackColor="#FFFFCC" />
+                                <StaticItemTemplate>
+                                    <%# Eval("Text") %>
+                                </StaticItemTemplate>
+                            </asp:Menu>
+                        </td>
+                        <td class="auto-style18">&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:ImageButton ID="ImageButton12" runat="server" Height="50px" ImageUrl="~/Images/GioHang.jpg" PostBackUrl="~/Customers/GioHang.aspx" Width="50px" />
+                            <strong>
+                            <asp:Label ID="lblSL" runat="server" CssClass="auto-style13" ForeColor="Red" Height="20px" Width="20px"></asp:Label>
+                            </strong>&nbsp;&nbsp;
+                            <asp:Image ID="Image7" runat="server" ImageUrl="~/Images/chungnhan.png" Width="172px" />
+                        </td>
+                    </tr>
+                </table>
+                <asp:Image ID="Image6" runat="server" CssClass="auto-style22" Height="773px" ImageUrl="~/Images/GioiThieu.jpg" Width="1450px" />
+                <br />
+            </div>
+            <br />
+            <br />
+            <br />
+        </div>
+</header>
+    <asp:Menu ID="Menu2" runat="server"
+                    Orientation="Horizontal" Font-Size="Small"
+                    Height="59px" BackColor="#33CCCC"
+                    RenderingMode="Table" Width="1450px" ForeColor="White"
+                    style="padding-left:10px" BorderStyle="Dashed" Font-Bold="True" Font-Strikeout="False"  CssClass="auto-style11">
+                    <DynamicHoverStyle BackColor="#7C6F57" ForeColor="White" />
+                    <DynamicMenuItemStyle HorizontalPadding="2px" VerticalPadding="8px" />
+                    <DynamicMenuStyle BackColor="#F7F6F3" />
+                    <DynamicSelectedStyle BackColor="#5D7B9D" />
+                    <Items>
+                        <asp:MenuItem Text="Trang Chủ" Value="1" NavigateUrl="~/TrangChu.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Giới Thiệu" Value="2" NavigateUrl="~/GioiThieu.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Hệ thống cửa hàng" Value="3" NavigateUrl="~/HTCH.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Thêm SP" Value="4" NavigateUrl="~/Admin/ThemSanPham.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Chi Tiết SP" Value="5" NavigateUrl="~/Admin/ChiTietSanPham.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Đăng Nhập" Value="6" NavigateUrl="~/Login.aspx"></asp:MenuItem>
+                    </Items>
+                    <StaticHoverStyle BackColor="White" ForeColor="#009999" />
+                    <StaticMenuItemStyle HorizontalPadding="2px" VerticalPadding="8px" />
+                    <StaticSelectedStyle BackColor="#5D7B9D" />
+                </asp:Menu>
+        <br />
+               <div id="side"  class="auto-style14" style="border-color: #33CCCC; background-color: #FFFFFF; width:250px" >
+                        <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="#009999" CssClass="auto-style29">Sản Phẩm</asp:Label>
+                        <br />
+                   <strong>
+                        <asp:Menu ID="Menu1" runat="server" Height="547px" RenderingMode="Table" Width="208px" BackColor="White" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="Medium" ForeColor="#009999" StaticSubMenuIndent="10px" CssClass="auto-style9" style="font-size: small">
+                            <DynamicHoverStyle BackColor="#33CCCC" ForeColor="White" />
+                            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                            <DynamicMenuStyle BackColor="#F7F6F3" />
+                            <DynamicSelectedStyle BackColor="#33CCCC" />
+                            <Items>
+                                <asp:MenuItem Text="BÚT" Value="1"></asp:MenuItem>
+                                <asp:MenuItem Text="VỞ SỔ" Value="2"></asp:MenuItem>
+                                <asp:MenuItem Text="THƯỚC" Value="3"></asp:MenuItem>
+                                <asp:MenuItem Text="MÁY TÍNH" Value="4"></asp:MenuItem>
+                                <asp:MenuItem Text="ĐỒ CHƠI" Value="5"></asp:MenuItem>
+                                <asp:MenuItem Text="KHÁC" Value="6"></asp:MenuItem>
+                            </Items>
+                            <StaticHoverStyle BackColor="#33CCCC" ForeColor="White" />
+                            <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                            <StaticSelectedStyle BackColor="#33CCCC" ForeColor="White" />
+                        </asp:Menu>
+                      
+                        </strong>
+                   <br style="background-color: #CCCCCC" />
+                    </div>
+                <div id="content" style ="width: 1180px">
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">       
+                </asp:ContentPlaceHolder>
+        </div>
+        <div id ="footer" class="auto-style10" style="background-color: #33CCCC; width:1450px">
+            <h2 class="auto-style13" style="color: #FFFFFF" >
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/Logo.jpg" />
+            </h2>
+            <h2 class="auto-style16" >THẾ GIỚI VĂN PHÒNG PHẨM</h2>
+            <p class="auto-style13" style="color: #FFFFFF" >
+                <asp:ImageButton ID="Imgfb" runat="server" Height="30px" ImageUrl="~/Images/fb.png" OnClick="Imgfb_Click" Width="30px" />
+&nbsp;
+                <asp:ImageButton ID="Imgig" runat="server" Height="30px" ImageUrl="~/Images/ig.png" OnClick="Imgig_Click" Width="30px" />
+&nbsp;
+                <asp:ImageButton ID="Imgtiktok" runat="server" Height="30px" ImageUrl="~/Images/tiktok.png" OnClick="Imgtiktok_Click" Width="30px" />
+            </p>
+            <span class="auto-style15">KẾT NỐI VỚI CHÚNG TÔI<br />
+            SĐT: 0896918585
+            <br />
+            Email:</span> <a href="mailto:contact@cleverworld.vn">contact@cleverworld.vn</a>
+            <br />
+            <span class="auto-style15">SOFIC Tower 10 Đ. Mai Chí Thọ, Thủ Thiêm, Thành phố Thủ Đức, TP.HCM
+        &nbsp;&nbsp;
+            </span>
+            </div>
+        </div>
+
+           </form>
+    </body>
+</html>

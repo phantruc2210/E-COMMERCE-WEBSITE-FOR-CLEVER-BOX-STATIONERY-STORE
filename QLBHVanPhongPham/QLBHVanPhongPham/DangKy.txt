@@ -1,0 +1,5 @@
+BẠN ĐÃ ĐĂNG KÝ THÀNH CÔNG !
+DƯỚI ĐÂY LÀ TÊN VÀ MẬT KHẨU : 
+
+tên đăng nhập : <% UserName %>
+mật khẩu : <% Password %>
